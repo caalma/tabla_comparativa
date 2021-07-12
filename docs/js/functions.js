@@ -21,6 +21,7 @@ function generate_menu(){
 	    G.html_des = $('#des');
 	    G.html_com = $('#com');
 	    G.html_aut = $('#aut');
+	    G.html_lic = $('#lic');
 	    G.html_tex = $('#tex');
 
 	  clear_document();
@@ -100,6 +101,7 @@ function clear_document(){
 	G.html_des.html('').hide();
 	G.html_com.html('').hide();
 	G.html_aut.html('').hide();
+	G.html_lic.html('').hide();
 	G.html_tex.html('');
 }
 

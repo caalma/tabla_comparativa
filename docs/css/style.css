@@ -111,7 +111,7 @@ header {
 }
 
 
-#des, #com, #aut {
+#des, #com, #aut, #lic {
   padding:5px 20px;
   color:#333;
   margin-bottom:2px;
@@ -126,6 +126,9 @@ header {
 }
 #aut {
   border-left:10px solid #33b;
+}
+#lic {
+  border-left:10px solid #3b6;
 }
 
 #tex {

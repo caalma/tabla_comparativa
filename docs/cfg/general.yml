@@ -1,0 +1,18 @@
+---
+
+title: | 
+  # TABLA COMPARATIVA
+
+
+subtitle: |
+  Utilidad para comparar contenidos
+
+folder: 
+  texts: './texts/'
+
+
+url:
+  github_repository: 'https://github.com/caalma/tabla_comparativa'
+
+
+menu_texts_list_file: './cfg/menu-automatic.yml'

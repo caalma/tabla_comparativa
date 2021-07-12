@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="true" name="HandheldFriendly"/>
+    <meta content="width" name="MobileOptimized"/>
+    <meta content="on" http-equiv="cleartype"/>
+
+	<link href="./img/loading.svg" rel="preload" as="image">
+
+    <link href="./img/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="./img/favicon_256.png" rel="alternate icon" type="image/png"/>
+    <link href="./img/favicon_60.png" id="icon60" rel="apple-touch-icon"/>
+    <link href="./img/favicon_76.png" id="icon76" rel="apple-touch-icon" sizes="76x76"/>
+    <link href="./img/favicon_120.png" id="icon120" rel="apple-touch-icon" sizes="120x120"/>
+    <link href="./img/favicon_152.png" id="icon152" rel="apple-touch-icon" sizes="152x152"/>
+
+    <link href="./img/logo_share.svg" rel="image_src"/>
+    
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5shiv.min.js"></script><![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Tabla comparativa</title>
+
+</head>
+<body> 
+    
+    <header>
+		<div class="title_logo">
+	    	<img id="logo" src="./img/logo_iso.svg">
+			<div id="title"></div>
+			<div id="subtitle"></div>
+		</div>
+	</header>
+	
+	<section class="menu_texts">
+		<h3>List of texts</h3>
+		<nav>
+			<ul id="menu"></ul>
+		</nav>
+	</section>
+
+	<section class="document">
+		<div id="lan" title="Languages"></div>
+		<a href="" id="tit" title="Title"></a>
+		<div id="des" title="Description"></div>
+		<div id="aut" title="Authors"></div>
+		<div id="com" title="Comments<"></div>
+		<div id="tex"></div>
+	</section>
+
+	<div id="loading"></div>
+	<div id="tools">
+		<button class="btn" title="Tools"></button>
+		<ul>
+			<li>
+				<label>Width Columns (%)</label>
+				<input type="range" min="1" max="100" value="30" id="tool_w_cols">
+			</li>
+			<li>
+				<label>Paragraph Dividing Lines</label>
+				<input type="checkbox" id="tool_p_d_lines">
+			</li>
+		</ul>
+	</div>
+
+    <a id="github_repository" href="" title="Github Repository"></a>
+    
+    <button id="exit"></button>
+
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/js-yaml.min.js"></script>
+    <script type="text/javascript" src="./js/underscore-min.js"></script>
+    <script type="text/javascript" src="./js/marked.min.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+
+    <!-- templates -->
+	<script type="text/template" id="item-menu">
+		<li>
+			<button data-key="{{= id }}" data-src="{{= ru }}{{= id }}.yml">{{= tit }}</button>
+		</li>
+	</script>
+
+	<script type="text/template" id="item-lang">
+		<button value="{{= id }}">{{= id }}</button>
+	</script>
+
+	<script type="text/template" id="item-text">
+		<div class="paragraph">
+			<div class="num">{{= n }}</div>
+			<div class="lang">
+				{{ _.each(ld, function(k){ }}
+					<div class="tex {{= k }}">
+						<span>{{= k }}</span>
+						<p>{{= marked(d[k]) }}</p>
+					</div>
+				{{ }); }}
+			</div>
+		</div>
+	</script>
+
+</body>
+</html>

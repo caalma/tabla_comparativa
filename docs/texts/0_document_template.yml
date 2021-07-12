@@ -1,0 +1,35 @@
+# required
+title: "Document Template"
+
+# optional
+description: |
+    Description **Markdown**
+    
+# optional
+comment: |
+    Comments **Markdown**
+
+# optional
+authors: |
+    Authors **Markdown**
+
+# required
+paragraphs:
+
+    -
+        lojban: |
+            jufmei 1 - **Markdown**
+        english: |
+            paragraph 1 - **Markdown**
+        español: |
+            párrafo 1 - **Markdown**
+
+    -
+        lojban: |
+            jufmei 2 - **Markdown**
+        english: |
+            paragraph 2 - **Markdown**
+        español: |
+            párrafo 2 - **Markdown**
+    
+

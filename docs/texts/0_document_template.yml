@@ -13,6 +13,10 @@ comment: |
 authors: |
     Authors **Markdown**
 
+# optional
+license: |
+    License **Markdown**
+
 # required
 paragraphs:
 

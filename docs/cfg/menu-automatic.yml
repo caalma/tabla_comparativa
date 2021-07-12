@@ -1,5 +1,9 @@
 texts:
   0_document_template:
     title: Document Template
-  la_djon_wilkins:
-    title: La Djon Wilkins
+  hello_world:
+    title: Hello World
+  image_style:
+    title: "Efecto de im\xE1genes"
+  john_wilkins:
+    title: "El idioma anal\xEDtico de John Wilkins"

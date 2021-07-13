@@ -1,0 +1,19 @@
+title: "Efecto de imágenes"
+
+paragraphs:
+
+    -
+        original: |
+            ![](./img_example/fx_01.jpg)
+        gris: |
+            ![](./img_example/fx_01-gris.jpg)
+        saturada: |
+            ![](./img_example/fx_01-saturada.jpg)
+
+    -
+        original: |
+            ![](./img_example/fx_02.jpg)
+        gris: |
+            ![](./img_example/fx_02-gris.jpg)
+        saturada: |
+            ![](./img_example/fx_02-saturada.jpg)

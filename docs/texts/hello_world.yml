@@ -1,0 +1,86 @@
+title: "Hello World"
+
+paragraphs:
+
+    -
+        assembly: |
+            ```
+                    global  _main
+                    extern  _printf
+
+                    section .text
+                _main:
+                    push    message
+                    call    _printf
+                    add     esp, 4
+                    ret
+                message:
+                    db  'Hello, World', 10, 0
+            ```
+
+        bash: |
+            ```
+                #!/bin/bash
+                STR="Hello World!"
+                echo $STR
+            ```
+
+        cpp: |
+            ```
+                #include <iostream>
+
+                int main()
+                {
+                    std::cout << "Hello, world!\n";
+                    return 0;
+                }
+            ```
+
+        clojure: |
+            ```
+                (println "Hello world!")
+            ```
+
+        lisp: |
+            ```
+                (print "Hello world")
+            ```
+
+        haskell: |
+            ```
+                module Main where
+
+                main :: IO ()
+                main = putStrLn "Hello, World!"
+            ```
+
+        lua: |
+            ```
+                print("Hello World!")
+            ```
+
+        python: |
+            ```
+                print("Hello World!")
+            ```
+
+        ruby: |
+            ```
+                puts 'Hello World!'
+            ```
+
+        scrath: |
+            ```
+                say Hello, World!
+            ```
+
+        self: |
+            ```
+                'Hello, World!' print.
+            ```
+
+        scheme: |
+            ```
+                (let ((hello0 (lambda() (display "Hello world") (newline))))
+                    (hello0))
+            ```

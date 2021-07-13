@@ -120,6 +120,9 @@ function show_document (d){
 	if(d.authors){
 		G.html_aut.html(marked(d.authors)).show();
 	}
+	if(d.license){
+		G.html_lic.html(marked(d.license)).show();
+	}
 
 	for(i in ld){
 		G.html_lan.append(G.templates.lan({id: ld[i]}));

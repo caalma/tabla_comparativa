@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from os import chdir, curdir, rename, listdir
-from os.path import isfile, splitext, basename, realpath
+from os.path import isfile, isdir, splitext, basename, realpath
 from sys import argv
 
 
@@ -47,15 +47,17 @@ class Normalizar():
 def main():
     ru = realpath(curdir)
     norm = Normalizar()
-    form = '{}.{}'
+    form = '{}{}{}'
     for no in listdir(ru):
         nom, ext = splitext(basename(no))
         naj = norm.ajustar(nom) 
         nex = norm.ajustar(ext)
-        nn = form.format(naj, nex)
+        dot = '' if isdir('./{}'.format(basename(no))) else '.'
+        nn = form.format(naj, dot, nex)
+
         while isfile('./{}'.format(nn)) and not nn == no:
             naj = '{}-'.format(naj)
-            nn = form.format(naj, nex)
+            nn = form.format(naj, dot, nex)
         rename(no, nn)
         
 if __name__ == '__main__':
